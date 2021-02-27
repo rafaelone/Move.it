@@ -83,7 +83,6 @@ export function ChallengesProvider({ children,
   }, [])
 
   const completeChallenge = useCallback(() => {
-    console.log("alou")
     if(!activeChallenge){
       return;
     }
