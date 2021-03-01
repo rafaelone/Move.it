@@ -11,11 +11,7 @@ import styles from "../styles/pages/Home.module.css"
 import { CountdownProvider } from "../contexts/CountdownContext";
 import { ChallengesProvider } from "../contexts/ChallengesContext";
 
-interface HomeProps {
-  level: number;
-  currentExperience: number;
-  challengesCompleted: number;
-}
+import { motion } from "framer-motion"
 
 export default function Home(props: HomeProps) {
   
@@ -25,7 +21,13 @@ export default function Home(props: HomeProps) {
       currentExperience={props.currentExperience}
       challengesCompleted={props.challengesCompleted}
       > 
-      <div className={styles.container}>
+      <motion.div 
+        className={styles.container}
+        initial={{opacity: 0}}
+        animate={{opacity: 1}}
+        transition={{delay: 0, duration: 0.1}}
+        layoutId="home"
+        >
         <Head>
           <title>Inicio | Move.it</title>
         </Head>
@@ -42,7 +44,7 @@ export default function Home(props: HomeProps) {
             </div>
           </section>
         </CountdownProvider>
-      </div>
+        </motion.div>
       </ChallengesProvider>
   )
 }

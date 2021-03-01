@@ -1,0 +1,52 @@
+.sideBar {
+  width: 112px;
+  height: 100vh;
+  background: var(--white);
+}
+
+.sideBar > div {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sideBar > div button {
+  border: none;
+  background: transparent;
+}
+
+.sideBar nav {
+  flex: 1;
+  height: calc(100% - 80px);
+}
+
+.sideBar nav ul {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  list-style: none;
+}
+
+.sideBar nav ul li {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  height: 56px;
+}
+
+.sideBar nav ul li + li {
+  margin-top: 16px;
+}
+
+.sideBar nav ul li > div {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

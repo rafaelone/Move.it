@@ -1,0 +1,21 @@
+.active {
+  transition: all 0.2s;
+}
+
+.active img {
+  transition: all 0.2s;
+  filter: invert(1) sepia(100) saturate(269) hue-rotate(250deg);
+  visibility: initial !important;
+  transform-origin: initial !important;
+  opacity: 1 !important;
+}
+
+.active::before {
+  position: absolute;
+  content: '';
+  width: 4px;
+  height: 56px;
+  background: #5965e0;
+  border-radius: 0px 5px 5px 0px;
+  left: 0;
+}
