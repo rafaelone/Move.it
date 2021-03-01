@@ -1,0 +1,118 @@
+.containerLogin {
+  height: 100vh;
+  background: var(--blue);
+  display: flex;
+  align-items: center;
+  padding-right: 1.25rem;
+}
+
+.logoMove {
+  margin-top: 5rem;
+}
+
+.logoMove img {
+  max-width: 48rem;
+  width: 100%;
+}
+
+.login {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login > img {
+  margin-bottom: 6rem;
+}
+
+.login > div h1 {
+  color: var(--white);
+  margin-bottom: 1.5rem;
+  font-family: 'Inter';
+  font-weight: 600;
+  font-size: 2.25rem;
+  line-height: 2.875rem;
+}
+
+.github {
+  display: flex;
+  align-items: center;
+  max-width: 19.875rem;
+}
+
+.github span {
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  color: var(--text-highlight);
+  display: block;
+  margin-left: 1.5rem;
+}
+
+.login form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 2.5rem;
+}
+
+.login form input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 21.25rem;
+  width: 100%;
+  height: 5rem;
+  border-radius: 5px;
+  color: var(--white);
+  padding: 1.438rem 1.438rem 1.438rem 1.875rem;
+  background: linear-gradient(90deg, #4953b8 0%, rgba(73, 83, 184, 0.2) 100%);
+  border: 0;
+}
+
+.login form input::placeholder {
+  color: var(--text-highlight);
+}
+
+.login form input:focus {
+  outline: 0;
+  border: none;
+}
+
+.login form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  background: var(--green);
+  border: 0;
+  transition: background 0.2s;
+}
+
+.login form button:disabled {
+  background: var(--blue-dark);
+}
+
+@media screen and (max-width: 980px) {
+  .containerLogin {
+    flex-direction: column;
+    padding: 0rem;
+  }
+
+  .login {
+    margin: 0rem 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .login > img {
+    width: 100%;
+  }
+
+  .logoMove {
+    display: none;
+  }
+}
